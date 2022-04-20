@@ -17,6 +17,11 @@ const vendorSchema = new Schema({
       type: String,
       required: true,
       unique: true
+  },
+  location: {
+      type: String,
+      required: true,
+      
   }
 });
 
