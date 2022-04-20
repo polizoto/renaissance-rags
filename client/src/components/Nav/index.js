@@ -43,7 +43,7 @@ function Nav() {
     <header className="flex-row px-1">
       <h1>
         <Link to="/">
-          <span role="img" aria-label="renaissance-rags">🛍️</span>
+          <span role="img" aria-label="crown emoticon">👑</span>
           -Renaissance-Rags
         </Link>
       </h1>
