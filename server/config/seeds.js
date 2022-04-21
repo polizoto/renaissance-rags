@@ -5,11 +5,11 @@ db.once('open', async () => {
   await Category.deleteMany();
 
   const categories = await Category.insertMany([
-    { name: 'Food' },
-    { name: 'Household Supplies' },
-    { name: 'Electronics' },
-    { name: 'Books' },
-    { name: 'Toys' }
+    { name: 'Knight' },
+    { name: 'Peasant' },
+    { name: 'Gypsy' },
+    { name: 'Princess' },
+    { name: 'Pirate' }
   ]);
 
   console.log('categories seeded');
@@ -18,13 +18,13 @@ db.once('open', async () => {
 
   const costumes = await Costume.insertMany([
     {
-      name: 'Tin of Cookies',
+      name: 'Templar Knight',
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: 'cookie-tin.jpg',
+      image: 'templar-knight.png',
       category: categories[0]._id,
-      price: 2.99,
-      quantity: 500
+      price: 200.00,
+      quantity: 5
     },
     {
       name: 'Canned Coffee',
@@ -90,12 +90,12 @@ db.once('open', async () => {
       quantity: 100
     },
     {
-      name: 'Spinning Top',
+      name: 'Black Beard',
       category: categories[4]._id,
       description: 'Ut vulputate hendrerit nibh, a placerat elit cursus interdum.',
-      image: 'spinning-top.jpg',
-      price: 1.99,
-      quantity: 1000
+      image: 'blackBeard.png',
+      price: 149.99,
+      quantity: 4
     },
     {
       name: 'Set of Plastic Horses',
@@ -150,6 +150,20 @@ db.once('open', async () => {
   });
 
   console.log('users seeded');
+
+  await Vendor.create({
+    firstName: 'Wes',
+    lastName: 'Bubba',
+    email: 'WB@testmail.com',
+    location: 'Camelot',
+    costumes: [
+      {
+        costumes: [costumes[0]._id, costumes[1]._id]
+      }
+    ]
+  })
+
+  console.log('vendors seeded');
 
   process.exit();
 });
