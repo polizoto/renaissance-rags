@@ -155,12 +155,7 @@ db.once('open', async () => {
     firstName: 'Wes',
     lastName: 'Bubba',
     email: 'WB@testmail.com',
-    location: 'Camelot',
-    costumes: [
-      {
-        costumes: [costumes[0]._id, costumes[1]._id]
-      }
-    ]
+    location: 'Camelot'
   })
 
   console.log('vendors seeded');
