@@ -12,9 +12,28 @@ export const QUERY_COSTUMES = gql`
       category {
         _id
       }
+      vendor {
+        _id
+        firstName
+        lastName
+        email
+        location
+      }
     }
   }
 `;
+
+export const QUERY_VENDORS = gql`
+{
+  vendors {
+    _id
+    firstName
+    lastName
+    email
+    location
+  }
+}
+`
 
 export const QUERY_ALL_COSTUMES = gql`
   {

@@ -28,7 +28,14 @@ const costumeSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'Category',
     required: true
-  }
+  },
+  vendor: 
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Vendor',
+      required: true
+    }
+  
 });
 
 const Costume = mongoose.model('Costume', costumeSchema);

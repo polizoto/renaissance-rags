@@ -6,6 +6,14 @@ const typeDefs = gql`
     name: String
   }
 
+  type Vendor {
+    _id: ID
+    firstName: String
+    lastName: String
+    email: String
+    location: String
+  }
+
   type Costume {
     _id: ID
     name: String
@@ -14,6 +22,7 @@ const typeDefs = gql`
     quantity: Int
     price: Float
     category: Category
+    vendor: Vendor
   }
 
   type Order {
@@ -46,6 +55,7 @@ const typeDefs = gql`
     user: User
     order(_id: ID!): Order
     checkout(costumes: [ID]!): Checkout
+    vendors: [Vendor]
   }
 
   type Mutation {

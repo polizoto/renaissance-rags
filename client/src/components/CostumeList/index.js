@@ -14,6 +14,7 @@ function CostumeList() {
   });
 
   const { currentCategory } = state;
+  console.log(state)
 
   const { loading, data } = useQuery(QUERY_COSTUMES);
 
@@ -44,7 +45,6 @@ function CostumeList() {
     if (!currentCategory) {
       return state.costumes;
     }
-  
     return state.costumes.filter(costume => costume.category._id === currentCategory);
   }
 

@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
-const Costume = require('./Costume');
 
 const vendorSchema = new Schema({
   firstName: {
@@ -22,8 +21,7 @@ const vendorSchema = new Schema({
   location: {
       type: String,
       required: true,
-  },
-  costumes: [Costume.schema]
+  }
 });
 
 const Vendor = mongoose.model('Vendor', vendorSchema);
