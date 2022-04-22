@@ -182,17 +182,5 @@ db.once('open', async () => {
 
   console.log('users seeded');
 
-<<<<<<< HEAD
-=======
-  await Vendor.create({
-    firstName: 'Wes',
-    lastName: 'Bubba',
-    email: 'WB@testmail.com',
-    location: 'Camelot'
-  })
-
-  console.log('vendors seeded');
-
->>>>>>> 5d53c60d747a74db8426d4d50f9dd1528cde4ea5
   process.exit();
 });
