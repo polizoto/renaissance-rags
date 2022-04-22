@@ -27,7 +27,7 @@ const resolvers = {
       return await Costume.find(params).populate('category').populate('vendor');
     },
     costume: async (parent, { _id }) => {
-      return await Costume.findById(_id).populate('category');
+      return await Costume.findById(_id).populate('category').populate('vendor');
     },
     user: async (parent, args, context) => {
       if (context.user) {

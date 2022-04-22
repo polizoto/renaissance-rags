@@ -83,6 +83,8 @@ function Detail() {
     idbPromise('cart', 'delete', { ...currentCostume });
   };
 
+  console.log(currentCostume.vendor)
+
   return (
     <>
       {currentCostume ? (
@@ -109,7 +111,11 @@ function Detail() {
             src={`/images/${currentCostume.image}`}
             alt={currentCostume.name}
           />
+        <Link to="/">
+        <p>sold by {currentCostume.name}</p>
+      </Link>
         </div>
+        
       ) : null}
       {loading ? <img src={spinner} alt="loading" /> : null}
       <Cart />

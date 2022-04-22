@@ -15,7 +15,9 @@ function CostumeItem(item) {
     name,
     _id,
     price,
-    quantity
+    quantity,
+    vendor_firstName,
+    vendor_lastName
   } = item;
 
   const { cart } = state;
@@ -51,6 +53,9 @@ function CostumeItem(item) {
           src={`/images/${image}`}
         />
         <p>{name}</p>
+      </Link>
+      <Link>
+        <p>sold by {vendor_firstName} {vendor_lastName}</p>
       </Link>
       <div>
         <div>{quantity} {pluralize("item", quantity)} in stock</div>

@@ -43,7 +43,9 @@ function CostumeList() {
   
   function filterCostumes() {
     if (!currentCategory) {
+      console.log(state)
       return state.costumes;
+
     }
     return state.costumes.filter(costume => costume.category._id === currentCategory);
   }
@@ -61,6 +63,8 @@ function CostumeList() {
               name={costume.name}
               price={costume.price}
               quantity={costume.quantity}
+              vendor_firstName={costume.vendor.firstName}
+              vendor_lastName={costume.vendor.lastName}
             />
           ))}
         </div>
