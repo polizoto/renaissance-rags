@@ -33,10 +33,15 @@ const costumeSchema = new Schema({
     {
       type: Schema.Types.ObjectId,
       ref: 'Vendor',
-      required: true
+      required: true,
     }
-  
-});
+},
+{
+  toJSON: {
+    virtuals: true
+  }
+}
+);
 
 const Costume = mongoose.model('Costume', costumeSchema);
 

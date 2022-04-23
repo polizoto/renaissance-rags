@@ -22,7 +22,8 @@ const vendorSchema = new Schema({
       type: String,
       required: true,
   }
-});
+}
+);
 
 const Vendor = mongoose.model('Vendor', vendorSchema);
 
