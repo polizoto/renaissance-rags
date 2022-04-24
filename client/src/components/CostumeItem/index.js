@@ -24,7 +24,6 @@ function CostumeItem(item) {
   const { cart } = state;
 
   const addToCart = () => {
-    console.log(_id)
 
   const itemInCart = cart.find((cartItem) => cartItem._id === _id);
 
@@ -41,7 +40,7 @@ function CostumeItem(item) {
   } else {
     dispatch({
       type: ADD_TO_CART,
-      product: { ...item, purchaseQuantity: 1 }
+      costume: { ...item, purchaseQuantity: 1 }
     });
     idbPromise('cart', 'put', { ...item, purchaseQuantity: 1 });
   }

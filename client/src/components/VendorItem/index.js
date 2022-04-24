@@ -40,7 +40,7 @@ function VendorItem(item) {
   } else {
     dispatch({
       type: ADD_TO_CART,
-      product: { ...item, purchaseQuantity: 1 }
+      costume: { ...item, purchaseQuantity: 1 }
     });
     idbPromise('cart', 'put', { ...item, purchaseQuantity: 1 });
   }

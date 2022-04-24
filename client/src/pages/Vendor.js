@@ -10,6 +10,7 @@ import {
 import { QUERY_COSTUMES, QUERY_VENDORS } from '../utils/queries';
 import VendorItem from '../components/VendorItem';
 import spinner from '../assets/spinner.gif';
+import Cart from '../components/Cart';
 
 function Vendor() {
   const dispatch = useDispatch();
@@ -101,6 +102,7 @@ function Vendor() {
               vendor_id={costume.vendor._id}
             />
           ))}
+          <Cart />
         </div>
       ) : (
         <h3>This vendor doesn't have any costumes yet!</h3>
