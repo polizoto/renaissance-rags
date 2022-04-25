@@ -84,6 +84,7 @@ const Cart = () => {
   {state.cart.length ? (
     <div>
       {state.cart.map(item => (
+
         <CartItem key={item._id} item={item} />
       ))}
       <div className="flex-row space-between">

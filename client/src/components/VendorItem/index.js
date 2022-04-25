@@ -5,7 +5,7 @@ import { idbPromise } from "../../utils/helpers";
 import { useSelector, useDispatch } from 'react-redux';
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from '../../utils/actions';
 
-function CostumeItem(item) {
+function VendorItem(item) {
   const dispatch = useDispatch();
   const state = useSelector((state) => {
     return state;
@@ -45,7 +45,6 @@ function CostumeItem(item) {
     idbPromise('cart', 'put', { ...item, purchaseQuantity: 1 });
   }
 }
-
   return (
     <div className="card px-1 py-1">
       <Link to={`/costumes/${_id}`}>
@@ -67,4 +66,4 @@ function CostumeItem(item) {
   );
 }
 
-export default CostumeItem;
+export default VendorItem;

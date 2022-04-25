@@ -36,3 +36,52 @@
     transform: rotate(360deg);
   }
 }
+
+.background {
+  background-image: url("./assets/renaisance-background.jpeg");
+  height: 140px;
+  width: 100%;
+  margin: 20px 0px;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  align-items: center;
+}
+nav ul li a {
+  padding: 10px 25px;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+}
+nav ul li a:hover {
+  border-radius: 15px;
+  text-shadow: none;
+  background-color: white;
+  color: #343a40;
+}
+nav ul li a:focus     {
+  border-radius: 15px;
+  text-shadow: none;
+  background-color: white;
+  color: #343a40;
+  outline: 0;
+  /* border: none; */
+}
+
+.category {
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.25rem 1rem;
+  border-radius: .5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0 1px;
+  background-color: #816362;
+  color: white;
+  font-size: 1.3rem;
+}

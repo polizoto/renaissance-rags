@@ -3,6 +3,9 @@ import {
     UPDATE_COSTUMES,
     UPDATE_CATEGORIES,
     UPDATE_CURRENT_CATEGORY,
+    UPDATE_CURRENT_COSTUME_ID,
+    UPDATE_CURRENT_VENDOR_ID,
+    UPDATE_VENDORS,
     ADD_TO_CART,
     ADD_MULTIPLE_TO_CART,
     REMOVE_FROM_CART,
@@ -16,7 +19,10 @@ const initialState = {
   cart: [],
   cartOpen: false,
   categories: [],
-  currentCategory: ''
+  currentCategory: '',
+  currentCostume_ID: '',
+  currentVendor_ID: '',
+  vendors: []
   }
   
   export default function appReducer (state = initialState, action) {
@@ -32,17 +38,32 @@ const initialState = {
           ...state,
           categories: [...action.categories]
         };
-        case UPDATE_CURRENT_CATEGORY:
-            return {
-              ...state,
-              currentCategory: action.currentCategory
-            };
-            case ADD_TO_CART:
-                return {
-                  ...state,
-                  cartOpen: true,
-                  cart: [...state.cart, action.costume]
-                };
+      case UPDATE_CURRENT_CATEGORY:
+          return {
+            ...state,
+            currentCategory: action.currentCategory
+          };
+      case UPDATE_CURRENT_COSTUME_ID:
+        return {
+          ...state,
+          currentCostume_ID: action.currentCostume_ID
+        };
+      case UPDATE_CURRENT_VENDOR_ID:
+        return {
+          ...state,
+          currentVendor_ID: action.currentVendor_ID
+        };
+        case UPDATE_VENDORS:
+          return {
+            ...state,
+            vendors: [...action.vendors]
+          };
+      case ADD_TO_CART:
+          return {
+            ...state,
+            cartOpen: true,
+            cart: [...state.cart, action.costume]
+          };
           
           case ADD_MULTIPLE_TO_CART:
             return {

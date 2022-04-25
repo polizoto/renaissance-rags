@@ -8,6 +8,7 @@ import {
   UPDATE_CART_QUANTITY,
   ADD_TO_CART,
   UPDATE_COSTUMES,
+  UPDATE_CURRENT_COSTUME_ID
 } from '../utils/actions';
 import { QUERY_COSTUMES } from '../utils/queries';
 import Cart from '../components/Cart';
@@ -24,12 +25,16 @@ function Detail() {
 
   const { loading, data } = useQuery(QUERY_COSTUMES);
 
-  const { costumes, cart } = state;
+  const { costumes, cart, currentCostume_ID } = state;
 
   useEffect(() => {
 
     if (costumes.length) {
-      setCurrentCostume(costumes.find(costume => costume._id === id));
+      dispatch({
+        type: UPDATE_CURRENT_COSTUME_ID,
+        currentCostume_ID: id,
+      });
+      setCurrentCostume(costumes.find(costume => costume._id === currentCostume_ID));
     } 
 
     else if (data) {
@@ -50,7 +55,7 @@ function Detail() {
         });
       });
     }
-  }, [costumes, data, loading, dispatch, id]);
+  }, [costumes, data, loading, dispatch, id, currentCostume_ID]);
 
   const addToCart = () => {
     const itemInCart = cart.find((cartItem) => cartItem._id === id)
@@ -83,7 +88,13 @@ function Detail() {
     idbPromise('cart', 'delete', { ...currentCostume });
   };
 
-  console.log(currentCostume.vendor)
+function filterCostume() {
+  if (!id) {
+    return state.costumes;
+
+  }
+  return state.costumes.filter(costume => costume._id === currentCostume_ID);
+}
 
   return (
     <>
@@ -111,11 +122,14 @@ function Detail() {
             src={`/images/${currentCostume.image}`}
             alt={currentCostume.name}
           />
-        <Link to="/">
-        <p>sold by {currentCostume.name}</p>
-      </Link>
+          {filterCostume().map((costume) => (
+            <div key={costume._id} className="card px-1 py-1">
+                  <Link to={`/vendors/${costume.vendor._id}`}>
+                  <p>sold by {costume.vendor.firstName} {costume.vendor.lastName}</p>
+                </Link>
+                </div>
+          ))}
         </div>
-        
       ) : null}
       {loading ? <img src={spinner} alt="loading" /> : null}
       <Cart />

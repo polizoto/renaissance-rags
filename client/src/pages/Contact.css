@@ -1,0 +1,61 @@
+body {
+    padding: 20px;
+    display: block;
+  }
+
+.container {
+    width: 500px;
+    clear: both;
+  }
+  
+  .container input {
+    width: 100%;
+    height: 30px;
+    clear: both;
+  }
+
+  .container textarea {
+    width: 100%;
+    clear: both;
+  }
+
+  .form-name {
+    padding: 10px 0px;
+  }
+  
+  
+  .form-email {
+    padding: 10px 0px;
+  }
+  
+  
+  .form-message {
+    padding: 10px 0px;
+  }
+  
+  
+  .form-button {
+    padding: 10px 0px;
+  }
+
+  .form-checkbox {
+    padding: 10px 0px;
+  }
+
+  .container .checkbox {
+      width: 5%;
+      height: 15px;
+  }
+
+      /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+      @media screen and (max-width: 750px) {
+        .container {
+          width: 100%
+        }
+        .container input {
+          width: 98%;
+        }
+        .container textarea {
+          width: 98%;
+        }
+          }

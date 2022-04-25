@@ -124,7 +124,7 @@ const resolvers = {
     updateCostume: async (parent, { _id, quantity }) => {
       const decrement = Math.abs(quantity) * -1;
 
-      return await Costume.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true });
+      return await Costume.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true }.populate('category').populate('vendor'));
     },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
