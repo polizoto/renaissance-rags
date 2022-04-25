@@ -44,7 +44,7 @@ function Nav() {
       <h1>
         <Link to="/">
           <span role="img" aria-label="crown emoticon">👑</span>
-          -Renaissance-Rags
+           Renaissance Rags
         </Link>
       </h1>
 

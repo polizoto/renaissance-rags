@@ -54,7 +54,7 @@ db.once('open', async () => {
       category: categories[0]._id,
       price: 1.99,
       quantity: 500,
-      vendor: vendors[0]._id
+      vendor: vendors[1]._id
     },
     {
       name: 'Toilet Paper',
