@@ -8,18 +8,17 @@ function Nav() {
       return (
         <ul className="flex-row">
           <li className="mx-1">
-<<<<<<< HEAD
+            <Link to="/orderHistory">Order History</Link>
+          </li>
+          <li className="mx-1">
             <Link to="/home">
-              Costumes
+              Costume
             </Link>
           </li>
           <li className="mx-1">
-            <Link to="/orderHistory">
-              Order History
+            <Link to="/contact">
+              Contact
             </Link>
-=======
-            <Link to="/orderHistory">Order History</Link>
->>>>>>> jonny
           </li>
           <li className="mx-1">
             <Link to="/contact">
@@ -38,14 +37,8 @@ function Nav() {
       return (
         <ul className="flex-row">
           <li className="mx-1">
-<<<<<<< HEAD
             <Link to="/home">
-              Costumes
-            </Link>
-          </li>
-          <li className="mx-1">
-            <Link to="/signup">
-              Signup
+              Costume
             </Link>
           </li>
           <li className="mx-1">
@@ -54,15 +47,10 @@ function Nav() {
             </Link>
           </li>
           <li className="mx-1">
-            <Link to="/login">
-              Login
-            </Link>
-=======
             <Link to="/signup">Signup</Link>
           </li>
           <li className="mx-1">
             <Link to="/login">Login</Link>
->>>>>>> jonny
           </li>
         </ul>
       );
@@ -73,15 +61,10 @@ function Nav() {
     <header className="flex-row px-1">
       <h1>
         <Link to="/">
-<<<<<<< HEAD
-          <span role="img" aria-label="crown emoticon">👑</span>
-           Renaissance Rags
-=======
           <span role="img" aria-label="crown emoticon">
             👑
           </span>
           Renaissance-Rags
->>>>>>> jonny
         </Link>
       </h1>
 
