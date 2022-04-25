@@ -8,23 +8,10 @@ function Nav() {
       return (
         <ul className="flex-row">
           <li className="mx-1">
-<<<<<<< HEAD
-            <Link to="/home">
-              Costumes
-            </Link>
-          </li>
-          <li className="mx-1">
-            <Link to="/orderHistory">
-              Order History
-            </Link>
-=======
             <Link to="/orderHistory">Order History</Link>
->>>>>>> jonny
           </li>
           <li className="mx-1">
-            <Link to="/contact">
-              Contact
-            </Link>
+            <Link to="/contact">Contact</Link>
           </li>
           <li className="mx-1">
             {/* this is not using the Link component to logout or user and then refresh the application to the start */}
@@ -38,31 +25,10 @@ function Nav() {
       return (
         <ul className="flex-row">
           <li className="mx-1">
-<<<<<<< HEAD
-            <Link to="/home">
-              Costumes
-            </Link>
-          </li>
-          <li className="mx-1">
-            <Link to="/signup">
-              Signup
-            </Link>
-          </li>
-          <li className="mx-1">
-            <Link to="/contact">
-              Contact
-            </Link>
-          </li>
-          <li className="mx-1">
-            <Link to="/login">
-              Login
-            </Link>
-=======
             <Link to="/signup">Signup</Link>
           </li>
           <li className="mx-1">
             <Link to="/login">Login</Link>
->>>>>>> jonny
           </li>
         </ul>
       );
@@ -73,15 +39,10 @@ function Nav() {
     <header className="flex-row px-1">
       <h1>
         <Link to="/">
-<<<<<<< HEAD
-          <span role="img" aria-label="crown emoticon">👑</span>
-           Renaissance Rags
-=======
           <span role="img" aria-label="crown emoticon">
             👑
           </span>
           Renaissance-Rags
->>>>>>> jonny
         </Link>
       </h1>
 
