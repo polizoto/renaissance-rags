@@ -16,6 +16,7 @@ import NoMatch from './pages/NoMatch';
 import Success from './pages/Success';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import Contact from './pages/Contact';
 import Nav from './components/Nav';
 import Vendor from './pages/Vendor';
 import OrderHistory from './pages/OrderHistory';
@@ -51,6 +52,7 @@ function App() {
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/orderHistory" component={OrderHistory} />
+            <Route exact path="/contact" component={Contact} />
             <Route exact path="/costumes/:id" component={Detail} />
             <Route exact path="/vendors/:id" component={Vendor} />
             <Route exact path="/success" component={Success} />
