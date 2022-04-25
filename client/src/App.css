@@ -71,3 +71,17 @@ nav ul li a:focus     {
   outline: 0;
   /* border: none; */
 }
+
+.category {
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.25rem 1rem;
+  border-radius: .5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0 1px;
+  background-color: #816362;
+  color: white;
+  font-size: 1.3rem;
+}
