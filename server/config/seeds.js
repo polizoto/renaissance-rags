@@ -64,7 +64,7 @@ db.once("open", async () => {
       image: "femalePirate.png",
       price: 150.0,
       quantity: 20,
-      vendor: vendors[0]._id,
+      vendor: vendors[1]._id,
     },
     {
       name: "Female Pirate Full Costume",
@@ -74,7 +74,17 @@ db.once("open", async () => {
       image: "femalePirate2.png",
       price: 99.99,
       quantity: 50,
-      vendor: vendors[0]._id,
+      vendor: vendors[1]._id,
+    },
+    {
+      name: "Male Peasant",
+      category: categories[1]._id,
+      description:
+        "In sodales, ipsum quis ultricies porttitor, tellus urna aliquam arcu, eget venenatis purus ligula ut nisi. Fusce ut felis dolor. Mauris justo ante, aliquet non tempus in, tempus ac lorem. Aliquam lacinia dolor eu sem eleifend ultrices. Etiam mattis metus metus. Sed ligula dui, placerat non turpis vitae, suscipit volutpat elit. Phasellus sagittis, diam elementum suscipit fringilla, libero mauris scelerisque ex, ac interdum diam erat non sapien.",
+      image: "malePeasant.png",
+      price: 49.99,
+      quantity: 30,
+      vendor: vendors[1]._id,
     },
     {
       name: "Jester",
@@ -97,16 +107,6 @@ db.once("open", async () => {
       vendor: vendors[0]._id,
     },
     {
-      name: "Male Peasant",
-      category: categories[1]._id,
-      description:
-        "In sodales, ipsum quis ultricies porttitor, tellus urna aliquam arcu, eget venenatis purus ligula ut nisi. Fusce ut felis dolor. Mauris justo ante, aliquet non tempus in, tempus ac lorem. Aliquam lacinia dolor eu sem eleifend ultrices. Etiam mattis metus metus. Sed ligula dui, placerat non turpis vitae, suscipit volutpat elit. Phasellus sagittis, diam elementum suscipit fringilla, libero mauris scelerisque ex, ac interdum diam erat non sapien.",
-      image: "malePeasant.png",
-      price: 49.99,
-      quantity: 30,
-      vendor: vendors[0]._id,
-    },
-    {
       name: "Male Pirate",
       category: categories[4]._id,
       description:
@@ -114,7 +114,7 @@ db.once("open", async () => {
       image: "malePirate.png",
       price: 59.99,
       quantity: 100,
-      vendor: vendors[0]._id,
+      vendor: vendors[1]._id,
     },
     {
       name: "Male Pirate",
@@ -124,7 +124,7 @@ db.once("open", async () => {
       image: "malePirate2.png",
       price: 69.99,
       quantity: 1000,
-      vendor: vendors[0]._id,
+      vendor: vendors[1]._id,
     },
     {
       name: "Black Beard",
@@ -134,7 +134,7 @@ db.once("open", async () => {
       image: "blackBeard.png",
       price: 149.99,
       quantity: 4,
-      vendor: vendors[0]._id,
+      vendor: vendors[1]._id,
     },
     {
       name: "femaleKnight",
@@ -154,7 +154,7 @@ db.once("open", async () => {
       image: "femalePeasant2.png",
       price: 149.99,
       quantity: 4,
-      vendor: vendors[0]._id,
+      vendor: vendors[1]._id,
     },
     {
       name: "Knight",
@@ -184,7 +184,7 @@ db.once("open", async () => {
       image: "malePeasant2.png",
       price: 149.99,
       quantity: 4,
-      vendor: vendors[0]._id,
+      vendor: vendors[1]._id,
     },
     {
       name: "Princess",
