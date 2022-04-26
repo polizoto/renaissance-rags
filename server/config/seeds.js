@@ -161,16 +161,6 @@ db.once("open", async () => {
       vendor: vendors[0]._id,
     },
     {
-      name: "Templar Knight",
-      description:
-        "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
-      image: "templar-knight.png",
-      category: categories[0]._id,
-      price: 200.0,
-      quantity: 5,
-      vendor: vendors[0]._id,
-    },
-    {
       name: "femaleKnight",
       category: categories[0]._id,
       description:
@@ -198,6 +188,16 @@ db.once("open", async () => {
       image: "knight3.png",
       price: 149.99,
       quantity: 4,
+      vendor: vendors[0]._id,
+    },
+    {
+      name: "Templar Knight",
+      description:
+        "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+      image: "templar-knight.png",
+      category: categories[0]._id,
+      price: 200.0,
+      quantity: 5,
       vendor: vendors[0]._id,
     },
   ]);
