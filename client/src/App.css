@@ -85,19 +85,3 @@ nav ul li a:focus     {
   color: white;
   font-size: 1.3rem;
 }
-
-.form-email {
-  padding: 10px 0px;
-}
-
-.form-name {
-  padding: 10px 0px;
-}
-
-.form-lastname {
-  padding: 10px 0px;
-}
-
-.form-password {
-  padding: 10px 0px;
-}
