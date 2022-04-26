@@ -11,6 +11,7 @@ import { QUERY_COSTUMES, QUERY_VENDORS } from '../utils/queries';
 import VendorItem from '../components/VendorItem';
 import spinner from '../assets/spinner.gif';
 import Cart from '../components/Cart';
+import './Vendor.css';
 
 function Vendor() {
   const dispatch = useDispatch();
@@ -81,11 +82,20 @@ function Vendor() {
 
   return (
     <div className="my-2">
-      <Link to="/">← Back to Costumes</Link>
+      <Link to="/home">← Back to Costumes</Link>
       {filterVendor().map((costume) => (
             <div key={costume._id} className="card px-1 py-1">
-                <h2>{costume.firstName} {costume.lastName}'s Costumes:</h2>
+                <h2 className="vendor">{costume.firstName} {costume.lastName}</h2>
+                <div className="vendor-card">
+                <img className="vendor-image"
+                alt={`${costume.firstName} ${costume.lastName}`}
+                src={`/images/${costume.image}`}/>
+                <p className="vendor-info">{costume.bio}</p>
+                <p className="vendor-info"><strong>Location: </strong> {costume.location}</p>
+                <p className="vendor-info"><strong>Contact: </strong><a href={`mailto:${costume.email}`}>{costume.email}</a></p>
                 </div>
+                <h2 className="vendor-title">Costumes</h2>
+            </div>
           ))}
       {state.costumes.length ? (
         <div className="flex-row">

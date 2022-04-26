@@ -12,7 +12,7 @@ function Nav() {
           </li>
           <li className="mx-1">
             <Link to="/home">
-              Costume
+              Costumes
             </Link>
           </li>
           <li className="mx-1">
@@ -36,7 +36,7 @@ function Nav() {
         <ul className="flex-row">
           <li className="mx-1">
             <Link to="/home">
-              Costume
+              Costumes
             </Link>
           </li>
           <li className="mx-1">
@@ -60,9 +60,9 @@ function Nav() {
       <h1>
         <Link to="/">
           <span role="img" aria-label="crown emoticon">
-            👑
+            👑 
           </span>
-          Renaissance-Rags
+          Renaissance Rags
         </Link>
       </h1>
 

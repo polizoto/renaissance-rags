@@ -21,13 +21,17 @@ db.once("open", async () => {
       firstName: "Wes",
       lastName: "Bubba",
       email: "WB@testmail.com",
-      location: "Camelot",
+      location: "Raleigh",
+      image: "renaissanceAvatar.webp",
+      bio: "I am seasoned Renaissance faire goer who has been making Renaissance costumes since the 70s. I also will rent costumes for special events. Contact me for more information.",
     },
     {
       firstName: "Dave",
       lastName: "Don",
       email: "DD@testmail.com",
-      location: "Downtown",
+      location: "High Point",
+      image: "renaissanceAvatar2.jpeg",
+      bio: "My wife and I have been making costumes since the early 1990s. We specialize in knight and princess costumes. We have been actively involved in the local Renaissance Faire organization since 2011.",
     },
   ]);
 
