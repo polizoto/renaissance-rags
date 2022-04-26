@@ -41,16 +41,6 @@ db.once("open", async () => {
 
   const costumes = await Costume.insertMany([
     {
-      name: "Templar Knight",
-      description:
-        "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
-      image: "templar-knight.png",
-      category: categories[0]._id,
-      price: 200.0,
-      quantity: 5,
-      vendor: vendors[0]._id,
-    },
-    {
       name: "Female Peasant",
       description:
         "Praesent sed lacinia mauris. Nulla congue nibh magna, at feugiat nunc scelerisque quis. Donec iaculis rutrum vulputate. Suspendisse lectus sem, vulputate ac lectus sed, placerat consequat dui.",
@@ -58,6 +48,46 @@ db.once("open", async () => {
       category: categories[1]._id,
       price: 99.99,
       quantity: 3,
+      vendor: vendors[0]._id,
+    },
+    {
+      name: "Male Peasant",
+      category: categories[1]._id,
+      description:
+        "In sodales, ipsum quis ultricies porttitor, tellus urna aliquam arcu, eget venenatis purus ligula ut nisi. Fusce ut felis dolor. Mauris justo ante, aliquet non tempus in, tempus ac lorem. Aliquam lacinia dolor eu sem eleifend ultrices. Etiam mattis metus metus. Sed ligula dui, placerat non turpis vitae, suscipit volutpat elit. Phasellus sagittis, diam elementum suscipit fringilla, libero mauris scelerisque ex, ac interdum diam erat non sapien.",
+      image: "malePeasant.png",
+      price: 49.99,
+      quantity: 30,
+      vendor: vendors[1]._id,
+    },
+    {
+      name: "female Peasant",
+      category: categories[1]._id,
+      description:
+        "Ut vulputate hendrerit nibh, a placerat elit cursus interdum.",
+      image: "femalePeasant2.png",
+      price: 149.99,
+      quantity: 4,
+      vendor: vendors[1]._id,
+    },
+    {
+      name: "Male Peasant",
+      category: categories[1]._id,
+      description:
+        "Ut vulputate hendrerit nibh, a placerat elit cursus interdum.",
+      image: "malePeasant2.png",
+      price: 149.99,
+      quantity: 4,
+      vendor: vendors[1]._id,
+    },
+    {
+      name: "Princess",
+      category: categories[3]._id,
+      description:
+        "Ut vulputate hendrerit nibh, a placerat elit cursus interdum.",
+      image: "princess.png",
+      price: 149.99,
+      quantity: 4,
       vendor: vendors[0]._id,
     },
     {
@@ -79,36 +109,6 @@ db.once("open", async () => {
       price: 99.99,
       quantity: 50,
       vendor: vendors[1]._id,
-    },
-    {
-      name: "Male Peasant",
-      category: categories[1]._id,
-      description:
-        "In sodales, ipsum quis ultricies porttitor, tellus urna aliquam arcu, eget venenatis purus ligula ut nisi. Fusce ut felis dolor. Mauris justo ante, aliquet non tempus in, tempus ac lorem. Aliquam lacinia dolor eu sem eleifend ultrices. Etiam mattis metus metus. Sed ligula dui, placerat non turpis vitae, suscipit volutpat elit. Phasellus sagittis, diam elementum suscipit fringilla, libero mauris scelerisque ex, ac interdum diam erat non sapien.",
-      image: "malePeasant.png",
-      price: 49.99,
-      quantity: 30,
-      vendor: vendors[1]._id,
-    },
-    {
-      name: "Jester",
-      category: categories[2]._id,
-      description:
-        "Vivamus ut turpis in purus pretium mollis. Donec turpis odio, semper vel interdum ut, vulputate at ex. Duis dignissim nisi vel tortor imperdiet finibus. Aenean aliquam sagittis rutrum.",
-      image: "jester.png",
-      price: 44.99,
-      quantity: 100,
-      vendor: vendors[0]._id,
-    },
-    {
-      name: "Jester Full Costume",
-      category: categories[2]._id,
-      description:
-        "Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.",
-      image: "jester2.png",
-      price: 99.99,
-      quantity: 30,
-      vendor: vendors[0]._id,
     },
     {
       name: "Male Pirate",
@@ -141,6 +141,36 @@ db.once("open", async () => {
       vendor: vendors[1]._id,
     },
     {
+      name: "Jester",
+      category: categories[2]._id,
+      description:
+        "Vivamus ut turpis in purus pretium mollis. Donec turpis odio, semper vel interdum ut, vulputate at ex. Duis dignissim nisi vel tortor imperdiet finibus. Aenean aliquam sagittis rutrum.",
+      image: "jester.png",
+      price: 44.99,
+      quantity: 100,
+      vendor: vendors[0]._id,
+    },
+    {
+      name: "Jester Full Costume",
+      category: categories[2]._id,
+      description:
+        "Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.",
+      image: "jester2.png",
+      price: 99.99,
+      quantity: 30,
+      vendor: vendors[0]._id,
+    },
+    {
+      name: "Templar Knight",
+      description:
+        "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+      image: "templar-knight.png",
+      category: categories[0]._id,
+      price: 200.0,
+      quantity: 5,
+      vendor: vendors[0]._id,
+    },
+    {
       name: "femaleKnight",
       category: categories[0]._id,
       description:
@@ -149,16 +179,6 @@ db.once("open", async () => {
       price: 149.99,
       quantity: 4,
       vendor: vendors[0]._id,
-    },
-    {
-      name: "female Peasant",
-      category: categories[1]._id,
-      description:
-        "Ut vulputate hendrerit nibh, a placerat elit cursus interdum.",
-      image: "femalePeasant2.png",
-      price: 149.99,
-      quantity: 4,
-      vendor: vendors[1]._id,
     },
     {
       name: "Knight",
@@ -176,26 +196,6 @@ db.once("open", async () => {
       description:
         "Ut vulputate hendrerit nibh, a placerat elit cursus interdum.",
       image: "knight3.png",
-      price: 149.99,
-      quantity: 4,
-      vendor: vendors[0]._id,
-    },
-    {
-      name: "Male Peasant",
-      category: categories[1]._id,
-      description:
-        "Ut vulputate hendrerit nibh, a placerat elit cursus interdum.",
-      image: "malePeasant2.png",
-      price: 149.99,
-      quantity: 4,
-      vendor: vendors[1]._id,
-    },
-    {
-      name: "Princess",
-      category: categories[3]._id,
-      description:
-        "Ut vulputate hendrerit nibh, a placerat elit cursus interdum.",
-      image: "princess.png",
       price: 149.99,
       quantity: 4,
       vendor: vendors[0]._id,
