@@ -1,0 +1,35 @@
+@font-face { font-family: Bauhaus; src: url('../fonts/BauhausStd-Light.otf'); } 
+@font-face { font-family: Bauhaus; font-weight: bold; src: url('../fonts/BauhausStd-Bold.otf'); }
+
+.vendor {
+    padding: 20px 10px;
+    /* background-color: #816362; */
+    color: black;
+    border: 2px solid black;
+    align-items: center;
+    border-radius: 9px;
+    text-align: center;
+    font-size: 36px;
+    font-family: Bauhaus, sans-serif;
+}
+
+.vendor-title {
+    font-size: 36px;
+    font-family: Bauhaus, sans-serif;
+}
+
+.vendor-image {
+    height: 150px;
+    width: 150px;
+    float: left;
+    margin-bottom: 0;
+    padding: 0px 10px 0 0;
+}
+
+.vendor-card {
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0 0 20px 0;
+    position: relative;
+    /* height: 5em; */
+}

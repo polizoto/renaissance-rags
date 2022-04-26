@@ -31,6 +31,8 @@ export const QUERY_VENDORS = gql`
     lastName
     email
     location
+    bio
+    image
   }
 }
 `
