@@ -42,11 +42,11 @@
 
 - AS a renaissance enthusiasts
 - I am looking to support local vendors
--
+- SO I can browse a variety of costumes and purchase.
 
 ## Link to live site
 
--
+- https://whispering-fjord-16472.herokuapp.com/
 
 ## Screenshot
 
