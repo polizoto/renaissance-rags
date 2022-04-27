@@ -54,10 +54,13 @@ function Nav() {
     }
   }
 
+  const color = {
+    "white": "#ffffff"
+  }
   return (
     <header className="flex-row px-1 title">
       <h1>
-        <Link to="/">
+        <Link style={{ color: color.white, textDecoration: "none" }} to="/">
           <span role="img" aria-label="crown emoticon">
             👑 
           </span>
