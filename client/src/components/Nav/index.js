@@ -5,23 +5,26 @@ import "./style.css";
 
 function Nav() {
   function showNavigation() {
+    const color = {
+      "white": "#ffffff"
+    }
     if (Auth.loggedIn()) {
       return (
         <ul className="flex-row">
           <li className="mx-1 navLink">
-            <Link to="/orderHistory">Order History</Link>
+            <Link style={{ color: color.white }} to="/orderHistory">Order History</Link>
           </li>
           <li className="mx-1 navLink">
-            <Link to="/home">
+            <Link style={{ color: color.white }} to="/home">
               Costumes
             </Link>
           </li>
           <li className="mx-1 navLink">
-            <Link to="/contact">Contact</Link>
+            <Link style={{ color: color.white }} to="/contact">Contact</Link>
           </li>
           <li className="mx-1 navLink">
             {/* this is not using the Link component to logout or user and then refresh the application to the start */}
-            <a href="/" onClick={() => Auth.logout()}>
+            <a style={{ color: color.white }}href="/" onClick={() => Auth.logout()}>
               Logout
             </a>
           </li>
@@ -31,20 +34,20 @@ function Nav() {
       return (
         <ul className="flex-row navLink">
           <li className="mx-1 navLink">
-            <Link to="/home">
+            <Link style={{ color: color.white }} to="/home">
               Costumes
             </Link>
           </li>
           <li className="mx-1 navLink">
-            <Link to="/contact">
+            <Link style={{ color: color.white }} to="/contact">
               Contact
             </Link>
           </li>
           <li className="mx-1 navLink">
-            <Link to="/signup">Signup</Link>
+            <Link style={{ color: color.white }} to="/signup">Signup</Link>
           </li>
           <li className="mx-1 navLink">
-            <Link to="/login">Login</Link>
+            <Link style={{ color: color.white }} to="/login">Login</Link>
           </li>
         </ul>
       );
