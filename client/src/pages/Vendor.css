@@ -33,3 +33,8 @@
     position: relative;
     /* height: 5em; */
 }
+
+.title {
+    font-family: Bauhaus, sans-serif;
+    background-color: #816362;
+}
