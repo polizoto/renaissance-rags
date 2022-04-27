@@ -23,6 +23,8 @@ const Cart = () => {
     useEffect(() => {
         if (data) {
           stripePromise.then((res) => {
+            console.log(data)
+            // problem occurs here
             res.redirectToCheckout({ sessionId: data.checkout.session });
           });
         }
@@ -64,7 +66,7 @@ const Cart = () => {
         getCheckout({
           variables: { costumes: costumeIds }
         });
-        
+      
       }
 
     if (!state.cartOpen) {

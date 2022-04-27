@@ -64,6 +64,7 @@ const resolvers = {
 
       for (let i = 0; i < costumes.length; i++) {
     
+        // problem occurs here
            const costume = await stripe.costumes.create({
             name: costumes[i].name,
             description: costumes[i].description,
@@ -91,7 +92,7 @@ const resolvers = {
         success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${url}/`
       });
-
+      console.log(session)
       return { session: session.id };
     }
   },
