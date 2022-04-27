@@ -9,7 +9,8 @@ function Nav() {
   function showNavigation() {
 
     const color = {
-      "white": "#816362"
+      "white": "#816362",
+      "hover": "#fbec5d"
     }
     const handleClick = () => {
       dispatch({
@@ -25,7 +26,9 @@ function Nav() {
             <Link style={{ color: color.white }} to="/orderHistory">Order History</Link>
           </li>
           <li className="mx-1 navLink">
-            <Link style={{ color: color.white }} to="/home">
+            <Link style={{ color: color.white }} onClick={() => {
+            handleClick();
+          }} to="/home">
               Costumes
             </Link>
           </li>
@@ -42,9 +45,9 @@ function Nav() {
       );
     } else {
       return (
-        <ul className="flex-row navLink">
+        <ul className="flex-row">
           <li className="mx-1 navLink">
-            <Link style={{ color: color.white }} onClick={() => {
+            <Link style={{ color: color.white, hover: color.hover }} onClick={() => {
             handleClick();
           }} to="/home">
               Costumes

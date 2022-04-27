@@ -61,18 +61,19 @@ nav ul li a {
   text-align: center;
   text-decoration: none;
 }
-nav ul li a:hover {
+/* nav ul li a:hover {
   border-radius: 15px;
   text-shadow: none;
   background-color: beige;
   color: black;
-}
+} */
 
 nav ul li a:focus {
   border-radius: 15px;
   text-shadow: none;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: #816362;
+  border: 1px solid yellow;
 }
 
 .category {
@@ -116,14 +117,32 @@ button[disabled]{
 
 
 button:hover {
-  background-color: #282c34;
+  background-color: white;
+  color: #816362;
+  border: 1px solid #999999;
 }
 button:focus {
   border-radius: 15px;
   text-shadow: none;
-  background-color: #816362;
-  color: white;
+  background-color: white;
+  color: #816362;
+  border: 1px solid #999999;
 }
+
+h1:hover {
+  border-radius: 15px;
+  background-color: white;
+  color: #816362;
+  border: 1px solid #999999;
+}
+
+h1:focus {
+  border-radius: 15px;
+  background-color: white;
+  color: #816362;
+  border: 1px solid #999999;
+}
+
 .form-email {
   padding: 10px 0px;
 }
@@ -191,8 +210,38 @@ title:hover {
 
 .navLink {
   margin: 15px;
+  padding: 15px;
+}
+
+.navLink:hover {
+  border-radius: 15px;
+  background-color: white;
+  color: white;
+  border: 1px solid #816362;
+}
+
+.navLink:focus {
+  border-radius: 15px;
+  background-color: white;
+  color: white;
+  border: 1px solid #816362;
 }
 
 .greeting {
   text-align: center;
 }
+
+.costume-link:hover {
+background-color: #816362;
+color: white;
+}
+
+.costume-link:focus {
+  background-color: #816362;
+  color: white;
+  }
+
+  .costume-vendor:hover {
+    background-color: #816362;
+    color: white;
+    }

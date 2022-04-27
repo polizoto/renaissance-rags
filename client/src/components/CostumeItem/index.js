@@ -4,10 +4,13 @@ import { pluralize } from "../../utils/helpers"
 import { idbPromise } from "../../utils/helpers";
 import { useSelector, useDispatch } from 'react-redux';
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from '../../utils/actions';
-import { Grid, Card } from "@material-ui/core"
+import { Grid, Card, CardMedia, CardContent } from "@material-ui/core"
 
 
 function CostumeItem(item) {
+  const handleMouseEnter = e => {
+    e.target.style.background = "grey"
+  }
   const dispatch = useDispatch();
   const state = useSelector((state) => {
     return state;
@@ -51,12 +54,21 @@ function CostumeItem(item) {
   return (
     <Grid item style={{display: 'flex', justifyContent: 'space-between'}}>
     <Card variant="outlined">
-    <Link style={{ textDecoration: 'none' }} to={`/costumes/${_id}`}>
-       <img
+    <Link onfocus={handleMouseEnter} style={{ textDecoration: 'none' }} to={`/costumes/${_id}`}>
+    <CardMedia
+                    
+                    component="img"
+                    image={`/images/${image}`}
+                    alt={name}
+                    title={name}
+                />
+       {/* <img
          alt={name}
          src={`/images/${image}`}
-       />
+       /> */}
+      <CardContent>
        <p className="costume-link">{name}</p>
+       </CardContent>
      </Link>
      <Link style={{ textDecoration: 'none'}} to={`/vendors/${vendor_id}`}>
        <p className="costume-vendor">{vendor_firstName} {vendor_lastName}</p>
