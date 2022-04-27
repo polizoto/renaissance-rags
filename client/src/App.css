@@ -109,7 +109,7 @@ button:hover {
 button:focus {
   border-radius: 15px;
   text-shadow: none;
-  background-color: black;
+  background-color: #816362;
   color: white;
 }
 .form-email {

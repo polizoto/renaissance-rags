@@ -6,7 +6,7 @@ import "./style.css";
 function Nav() {
   function showNavigation() {
     const color = {
-      "white": "#ffffff"
+      "white": "#816362"
     }
     if (Auth.loggedIn()) {
       return (
@@ -55,7 +55,7 @@ function Nav() {
   }
 
   const color = {
-    "white": "#ffffff"
+    "white": "#816362"
   }
   return (
     <header className="flex-row px-1 title">
