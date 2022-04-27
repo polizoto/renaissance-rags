@@ -118,3 +118,7 @@ button {
 .form-password {
   padding: 10px 0px;
 }
+
+.categoryList {
+  width: 100%;
+}
