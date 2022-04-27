@@ -152,10 +152,10 @@ button:focus {
   color: white;
 }
 
-.container {
+/* .container {
   display: flex;
   flex-direction: row;
-}
+} */
 
 .costume-link {
   text-align: center;
@@ -179,4 +179,8 @@ button:focus {
 .add-to-Cart {
   text-align: center;
   padding: 10px;
+}
+
+.home-image {
+  width: 100%;
 }

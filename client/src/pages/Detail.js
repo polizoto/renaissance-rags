@@ -99,7 +99,7 @@ function filterCostume() {
   return (
     <>
       {currentCostume ? (
-        <div className="container my-1">
+        <div>
           <Link to="/">← Back to Costumes</Link>
 
           <h2>{currentCostume.name}</h2>
