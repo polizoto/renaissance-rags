@@ -1,31 +1,30 @@
 import React from "react";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
+import "./style.css";
 
 function Nav() {
   function showNavigation() {
+    const color = {
+      "white": "#ffffff"
+    }
     if (Auth.loggedIn()) {
       return (
         <ul className="flex-row">
-          <li className="mx-1">
-            <Link to="/orderHistory">Order History</Link>
+          <li className="mx-1 navLink">
+            <Link style={{ color: color.white }} to="/orderHistory">Order History</Link>
           </li>
-          <li className="mx-1">
-            <Link to="/home">
+          <li className="mx-1 navLink">
+            <Link style={{ color: color.white }} to="/home">
               Costumes
             </Link>
           </li>
-          <li className="mx-1">
-            <Link to="/contact">
-              Contact
-            </Link>
+          <li className="mx-1 navLink">
+            <Link style={{ color: color.white }} to="/contact">Contact</Link>
           </li>
-          <li className="mx-1">
-            <Link to="/contact">Contact</Link>
-          </li>
-          <li className="mx-1">
+          <li className="mx-1 navLink">
             {/* this is not using the Link component to logout or user and then refresh the application to the start */}
-            <a href="/" onClick={() => Auth.logout()}>
+            <a style={{ color: color.white }}href="/" onClick={() => Auth.logout()}>
               Logout
             </a>
           </li>
@@ -33,39 +32,41 @@ function Nav() {
       );
     } else {
       return (
-        <ul className="flex-row">
-          <li className="mx-1">
-            <Link to="/home">
+        <ul className="flex-row navLink">
+          <li className="mx-1 navLink">
+            <Link style={{ color: color.white }} to="/home">
               Costumes
             </Link>
           </li>
-          <li className="mx-1">
-            <Link to="/contact">
+          <li className="mx-1 navLink">
+            <Link style={{ color: color.white }} to="/contact">
               Contact
             </Link>
           </li>
-          <li className="mx-1">
-            <Link to="/signup">Signup</Link>
+          <li className="mx-1 navLink">
+            <Link style={{ color: color.white }} to="/signup">Signup</Link>
           </li>
-          <li className="mx-1">
-            <Link to="/login">Login</Link>
+          <li className="mx-1 navLink">
+            <Link style={{ color: color.white }} to="/login">Login</Link>
           </li>
         </ul>
       );
     }
   }
 
+  const color = {
+    "white": "#ffffff"
+  }
   return (
-    <header className="flex-row px-1">
+    <header className="flex-row px-1 title">
       <h1>
-        <Link to="/">
+        <Link style={{ color: color.white, textDecoration: "none" }} to="/">
           <span role="img" aria-label="crown emoticon">
             👑 
           </span>
           Renaissance Rags
         </Link>
       </h1>
-
       <nav>{showNavigation()}</nav>
     </header>
   );

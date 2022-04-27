@@ -1,4 +1,4 @@
-.App {
+body .App {
   text-align: center;
 }
 
@@ -52,24 +52,24 @@ nav ul {
   align-items: center;
 }
 nav ul li a {
-  padding: 10px 25px;
-  font-size: 28px;
+  padding: 10px 25px 15px;
+  font-size: 25px;
   font-weight: bold;
   text-align: center;
+  text-decoration: none;
 }
 nav ul li a:hover {
   border-radius: 15px;
   text-shadow: none;
-  background-color: white;
-  color: #343a40;
+  background-color: beige;
+  color: black;
 }
+
 nav ul li a:focus {
   border-radius: 15px;
   text-shadow: none;
-  background-color: white;
-  color: #343a40;
-  outline: 0;
-  /* border: none; */
+  background-color: black;
+  color: white;
 }
 
 .category {
@@ -103,6 +103,15 @@ button {
   color: white;
   font-size: 1.3rem;
 }
+button:hover {
+  background-color: #282c34;
+}
+button:focus {
+  border-radius: 15px;
+  text-shadow: none;
+  background-color: black;
+  color: white;
+}
 .form-email {
   padding: 10px 0px;
 }
@@ -121,4 +130,12 @@ button {
 
 .categoryList {
   width: 100%;
+}
+.button {
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #4caf50; /* Green */
+  color: white;
 }
