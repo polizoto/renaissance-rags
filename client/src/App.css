@@ -73,7 +73,7 @@ nav ul li a:focus {
   text-shadow: none;
   background-color: white;
   color: #816362;
-  border: 1px solid yellow;
+  border: 1px solid #816362;
 }
 
 .category {
@@ -119,28 +119,29 @@ button[disabled]{
 button:hover {
   background-color: white;
   color: #816362;
-  border: 1px solid #999999;
+  /* border: 1px solid #999999; */
 }
 button:focus {
   border-radius: 15px;
   text-shadow: none;
   background-color: white;
   color: #816362;
-  border: 1px solid #999999;
+  outline: none;
+  /* border: 1px solid #999999; */
 }
 
 h1:hover {
   border-radius: 15px;
   background-color: white;
   color: #816362;
-  border: 1px solid #999999;
+  /* border: 1px solid #999999; */
 }
 
 h1:focus {
   border-radius: 15px;
   background-color: white;
   color: #816362;
-  border: 1px solid #999999;
+  /* border: 1px solid #999999; */
 }
 
 .form-email {
@@ -224,7 +225,8 @@ title:hover {
   border-radius: 15px;
   background-color: white;
   color: white;
-  border: 1px solid #816362;
+  /* border: 1px solid #816362; */
+  outline: none;
 }
 
 .greeting {
@@ -239,9 +241,38 @@ color: white;
 .costume-link:focus {
   background-color: #816362;
   color: white;
+  /* outline: none; */
+  }
+
+  a:focus {
+    outline: none;
+    border: 1px solid #816362;
+    background-color: white;
+  }
+
+  a:focus > p {
+    outline: none;
+    border: 1px solid #816362;
+    background-color: white;
+  }
+
+  a:focus > .costume-link {
+    outline: none;
+    border: 1px solid #816362;
+    background-color: white;
   }
 
   .costume-vendor:hover {
     background-color: #816362;
     color: white;
     }
+
+    .costume-vendor:active  .costume-vendor:active {
+      background-color: #816362;
+      color: white;
+      /* outline: none; */
+      }
+
+      .add-to-Cart > button:focus {
+        border: 1px solid #816362;
+      }

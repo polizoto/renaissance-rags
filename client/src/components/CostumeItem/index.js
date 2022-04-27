@@ -8,9 +8,6 @@ import { Grid, Card, CardMedia, CardContent } from "@material-ui/core"
 
 
 function CostumeItem(item) {
-  const handleMouseEnter = e => {
-    e.target.style.background = "grey"
-  }
   const dispatch = useDispatch();
   const state = useSelector((state) => {
     return state;
@@ -54,7 +51,7 @@ function CostumeItem(item) {
   return (
     <Grid item style={{display: 'flex', justifyContent: 'space-between'}}>
     <Card variant="outlined">
-    <Link onfocus={handleMouseEnter} style={{ textDecoration: 'none' }} to={`/costumes/${_id}`}>
+    <Link style={{ textDecoration: 'none' }} to={`/costumes/${_id}`}>
     <CardMedia
                     
                     component="img"
