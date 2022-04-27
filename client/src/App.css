@@ -129,8 +129,17 @@ button:focus {
 }
 
 .categoryList {
-  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
+
+.costume-items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 .button {
   transition-duration: 0.4s;
 }
@@ -138,4 +147,9 @@ button:focus {
 .button:hover {
   background-color: #4caf50; /* Green */
   color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
 }

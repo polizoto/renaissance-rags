@@ -4,7 +4,7 @@ import { pluralize } from "../../utils/helpers"
 import { idbPromise } from "../../utils/helpers";
 import { useSelector, useDispatch } from 'react-redux';
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from '../../utils/actions';
-import { Card } from "@material-ui/core"
+import { Grid, Card } from "@material-ui/core"
 
 
 function CostumeItem(item) {
@@ -49,25 +49,9 @@ function CostumeItem(item) {
 }
 
   return (
-  //   <div className="card px-1 py-1">
-  //     <Link to={`/costumes/${_id}`}>
-  //       <img
-  //         alt={name}
-  //         src={`/images/${image}`}
-  //       />
-  //       <p>{name}</p>
-  //     </Link>
-  //     <Link to={`/vendors/${vendor_id}`}>
-  //       <p>sold by {vendor_firstName} {vendor_lastName}</p>
-  //     </Link>
-  //     <div>
-  //       <div>{quantity} {pluralize("item", quantity)} in stock</div>
-  //       <span>${price}</span>
-  //     </div>
-  //     <button onClick={addToCart}>Add to cart</button>
-  //   </div>
-  // );
-<Card variant="outlined">
+  <Grid container alignItems="stretch">
+  <Grid item style={{display: 'flex'}}>
+<Card style={{display: 'flex', justifyContent: 'space-between', flexDirection: 'column'}} variant="outlined">
 <Link to={`/costumes/${_id}`}>
        <img
          alt={name}
@@ -84,6 +68,9 @@ function CostumeItem(item) {
      </div>
      <button onClick={addToCart}>Add to cart</button>
   </Card>
+  </Grid>
+</Grid>
+
 );
 }
 

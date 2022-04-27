@@ -6,7 +6,6 @@ import CostumeItem from '../CostumeItem';
 import { QUERY_COSTUMES } from '../../utils/queries';
 import spinner from '../../assets/spinner.gif';
 import { idbPromise } from '../../utils/helpers';
-import './style.css';
 
 function CostumeList() {
   const dispatch = useDispatch();
@@ -49,7 +48,7 @@ function CostumeList() {
   }
 
   return (
-    <div className="my-2">
+    <div>
       <h2>Our Costumes:</h2>
       {state.costumes.length ? (
         <div className="flex-row">
