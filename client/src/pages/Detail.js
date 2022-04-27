@@ -15,6 +15,9 @@ import Cart from '../components/Cart';
 import spinner from '../assets/spinner.gif';
 
 function Detail() {
+  const color = {
+    "white": "#816362"
+  }
   const dispatch = useDispatch();
   const state = useSelector((state) => {
     return state;
@@ -100,16 +103,16 @@ function filterCostume() {
     <>
       {currentCostume ? (
         <div>
-          <Link to="/">← Back to Costumes</Link>
+          <Link style={{ color: color.white, textDecoration: "none" }} to="/">← Back to Costumes</Link>
 
-          <h2>{currentCostume.name}</h2>
+          <h2 className="costume-title">{currentCostume.name}</h2>
 
           <p>{currentCostume.description}</p>
 
           <p>
             <strong>Price:</strong>${currentCostume.price}{' '}
             <button onClick={addToCart}>Add to cart</button>
-            <button 
+            <button className="removeCart"
             disabled={!cart.find(p => p._id === currentCostume._id)} 
             onClick={removeFromCart}
             >
@@ -124,8 +127,8 @@ function filterCostume() {
           />
           {filterCostume().map((costume) => (
             <div key={costume._id} className="card px-1 py-1">
-                  <Link to={`/vendors/${costume.vendor._id}`}>
-                  <p>sold by {costume.vendor.firstName} {costume.vendor.lastName}</p>
+                  <Link style={{ textDecoration: 'none'}} to={`/vendors/${costume.vendor._id}`}>
+                  <p className="costume-vendor">{costume.vendor.firstName} {costume.vendor.lastName}</p>
                 </Link>
                 </div>
           ))}

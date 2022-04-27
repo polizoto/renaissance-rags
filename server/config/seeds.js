@@ -23,7 +23,7 @@ db.once("open", async () => {
       email: "WB@testmail.com",
       location: "Raleigh",
       image: "renaissanceAvatar.webp",
-      bio: "I am seasoned Renaissance faire goer who has been making Renaissance costumes since the 70s. I also will rent costumes for special events. Contact me for more information.",
+      bio: "I am a seasoned Renaissance faire goer who has been making Renaissance costumes since the 70s. I also will rent costumes for special events. Contact me for more information.",
     },
     {
       firstName: "Dave",

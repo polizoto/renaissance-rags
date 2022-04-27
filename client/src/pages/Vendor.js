@@ -15,6 +15,9 @@ import './Vendor.css';
 import { Grid } from "@material-ui/core"
 
 function Vendor() {
+  const color = {
+    "white": "#816362"
+  }
   const dispatch = useDispatch();
   const state = useSelector((state) => {
     return state;
@@ -83,7 +86,7 @@ function Vendor() {
 
   return (
     <div className="my-2">
-      <Link to="/home">← Back to Costumes</Link>
+      <Link style={{ color: color.white, textDecoration: "none" }} to="/home">← Back to Costumes</Link>
       {filterVendor().map((costume) => (
             <div key={costume._id} className="card px-1 py-1">
                 <h2 className="vendor">{costume.firstName} {costume.lastName}</h2>

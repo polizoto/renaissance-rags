@@ -1,13 +1,23 @@
 import React from "react";
 import Auth from "../../utils/auth";
+import { UPDATE_CURRENT_CATEGORY} from '../../utils/actions';
+import { useDispatch } from 'react-redux';
 import { Link } from "react-router-dom";
-import "./style.css";
 
 function Nav() {
+  const dispatch = useDispatch();
   function showNavigation() {
+
     const color = {
       "white": "#816362"
     }
+    const handleClick = () => {
+      dispatch({
+        type: UPDATE_CURRENT_CATEGORY,
+        currentCategory: null,
+      });
+      // console.log(state)
+    };
     if (Auth.loggedIn()) {
       return (
         <ul className="flex-row">
@@ -34,7 +44,9 @@ function Nav() {
       return (
         <ul className="flex-row navLink">
           <li className="mx-1 navLink">
-            <Link style={{ color: color.white }} to="/home">
+            <Link style={{ color: color.white }} onClick={() => {
+            handleClick();
+          }} to="/home">
               Costumes
             </Link>
           </li>
@@ -64,7 +76,9 @@ function Nav() {
           <span role="img" aria-label="crown emoticon">
             👑 
           </span>
+          <span className="title">
           Renaissance Rags
+          </span>
         </Link>
       </h1>
       <nav>{showNavigation()}</nav>

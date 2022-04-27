@@ -48,6 +48,8 @@ function CostumeList() {
     return state.costumes.filter(costume => costume.category._id === currentCategory);
   }
 
+  console.log(currentCategory)
+
   return (
     <div>
       <h2>Our Costumes:</h2>

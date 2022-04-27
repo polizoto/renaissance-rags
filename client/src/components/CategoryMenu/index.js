@@ -39,7 +39,7 @@ function CategoryMenu() {
       type: UPDATE_CURRENT_CATEGORY,
       currentCategory: id,
     });
-    console.log(state)
+    // console.log(state)
   };
 
   return (
