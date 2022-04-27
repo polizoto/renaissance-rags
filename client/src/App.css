@@ -166,6 +166,11 @@ h1:focus {
   flex-wrap: wrap;
 }
 
+.category {
+  padding: 15px;
+  margin: 10px;
+}
+
 .costume-items {
   display: flex;
   justify-content: space-between;
@@ -204,6 +209,13 @@ h1 {
   font-size: 42px;
 }
 
+/* a:focus {
+  background-color: white;
+  color: white;
+  border: 1px solid #816362;
+  outline: none;
+} */
+
 title:hover {
   background-color: #816362;
   color: white;
@@ -238,16 +250,11 @@ background-color: #816362;
 color: white;
 }
 
-.costume-link:focus {
-  background-color: #816362;
-  color: white;
-  /* outline: none; */
-  }
 
   a:focus {
+    /* border: 1px solid #816362;
+    background-color: white; */
     outline: none;
-    border: 1px solid #816362;
-    background-color: white;
   }
 
   a:focus > p {
@@ -256,22 +263,17 @@ color: white;
     background-color: white;
   }
 
-  a:focus > .costume-link {
-    outline: none;
+a:focus > img {
+    /* outline: none; */
     border: 1px solid #816362;
-    background-color: white;
+
+    opacity: 1;
   }
 
   .costume-vendor:hover {
     background-color: #816362;
     color: white;
     }
-
-    .costume-vendor:active  .costume-vendor:active {
-      background-color: #816362;
-      color: white;
-      /* outline: none; */
-      }
 
       .add-to-Cart > button:focus {
         border: 1px solid #816362;
