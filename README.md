@@ -50,7 +50,10 @@
 
 ## Screenshot
 
--
+![screenshot](https://github.com/polizoto/renaissance-rags/blob/main/client/public/images/signup-screenshot.png)
+![screenshot](https://github.com/polizoto/renaissance-rags/blob/main/client/public/images/login-screenshot.png)
+![screenshot](https://github.com/polizoto/renaissance-rags/blob/main/client/public/images/costumes-screenshot.png)
+![screenshot](https://github.com/polizoto/renaissance-rags/blob/main/client/public/images/contact-screenshot.png)
 
 ## Milestones
 
@@ -73,4 +76,4 @@
 
 ## Slide Deck
 
--
+- https://docs.google.com/presentation/d/1JFqZ0Ftkp46CeSEuTID4TDu9UI7QLk0IsuNMdt68MNk/edit#slide=id.p
