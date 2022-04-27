@@ -43,8 +43,10 @@ function CategoryMenu() {
   };
 
   return (
-    <div>
+    <div >
       <h2>Choose a Category:</h2>
+    <div>
+      <div className="categoryList">
       {categories.map((item, idx) => (
         <button
           className="category"
@@ -56,6 +58,8 @@ function CategoryMenu() {
           {item.name}
         </button>
       ))}
+      </div>
+      </div>
     </div>
   );
 }

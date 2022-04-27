@@ -4,6 +4,7 @@ import { pluralize } from "../../utils/helpers"
 import { idbPromise } from "../../utils/helpers";
 import { useSelector, useDispatch } from 'react-redux';
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from '../../utils/actions';
+import { Grid, Card } from "@material-ui/core"
 
 function VendorItem(item) {
   const dispatch = useDispatch();
@@ -46,23 +47,27 @@ function VendorItem(item) {
   }
 }
   return (
-    <div className="card px-1 py-1">
-      <Link to={`/costumes/${_id}`}>
-        <img
-          alt={name}
-          src={`/images/${image}`}
-        />
-        <p>{name}</p>
-      </Link>
-      <Link to={`/vendors/${vendor_id}`}>
-        <p>sold by {vendor_firstName} {vendor_lastName}</p>
-      </Link>
-      <div>
-        <div>{quantity} {pluralize("item", quantity)} in stock</div>
-        <span>${price}</span>
-      </div>
-      <button onClick={addToCart}>Add to cart</button>
-    </div>
+    <Grid item style={{display: 'flex', justifyContent: 'space-between'}}>
+    <Card variant="outlined">
+    <Link style={{ textDecoration: 'none' }} to={`/costumes/${_id}`}>
+       <img
+         alt={name}
+         src={`/images/${image}`}
+       />
+       <p className="costume-link">{name}</p>
+     </Link>
+     <Link style={{ textDecoration: 'none'}} to={`/vendors/${vendor_id}`}>
+       <p className="costume-vendor">{vendor_firstName} {vendor_lastName}</p>
+     </Link>
+     <div className="costume-info">
+       <div>{quantity} {pluralize("item", quantity)} in stock</div>
+       <span>${price}</span>
+     </div>
+     <div className="add-to-Cart">
+     <button onClick={addToCart}>Add to cart</button>
+     </div>
+  </Card>
+  </Grid>
   );
 }
 

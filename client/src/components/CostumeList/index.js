@@ -6,6 +6,7 @@ import CostumeItem from '../CostumeItem';
 import { QUERY_COSTUMES } from '../../utils/queries';
 import spinner from '../../assets/spinner.gif';
 import { idbPromise } from '../../utils/helpers';
+import { Grid } from "@material-ui/core"
 
 function CostumeList() {
   const dispatch = useDispatch();
@@ -48,10 +49,12 @@ function CostumeList() {
   }
 
   return (
-    <div className="my-2">
+    <div>
       <h2>Our Costumes:</h2>
       {state.costumes.length ? (
-        <div className="flex-row">
+          <Grid container spacing={4}   direction="row"
+          justifyContent="space-evenly"
+          alignItems="stretch">
           {filterCostumes().map((costume) => (
             <CostumeItem
               key={costume._id}
@@ -65,7 +68,7 @@ function CostumeList() {
               vendor_id={costume.vendor._id}
             />
           ))}
-        </div>
+       </Grid>
       ) : (
         <h3>You haven't added any costumes yet!</h3>
       )}
