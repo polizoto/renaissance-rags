@@ -1,7 +1,7 @@
 import React from "react";
 import CostumeList from "../components/CostumeList";
 import CategoryMenu from "../components/CategoryMenu";
-import Cart from '../components/Cart';
+import Cart from "../components/Cart";
 
 const Home = () => {
   return (

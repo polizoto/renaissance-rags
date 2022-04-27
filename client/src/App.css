@@ -1,4 +1,4 @@
-.App {
+body .App {
   text-align: center;
 }
 
@@ -52,31 +52,31 @@ nav ul {
   align-items: center;
 }
 nav ul li a {
-  padding: 10px 25px;
-  font-size: 28px;
+  padding: 10px 25px 15px;
+  font-size: 25px;
   font-weight: bold;
   text-align: center;
+  text-decoration: none;
 }
 nav ul li a:hover {
   border-radius: 15px;
   text-shadow: none;
-  background-color: white;
-  color: #343a40;
+  background-color: beige;
+  color: black;
 }
-nav ul li a:focus     {
+
+nav ul li a:focus {
   border-radius: 15px;
   text-shadow: none;
-  background-color: white;
-  color: #343a40;
-  outline: 0;
-  /* border: none; */
+  background-color: black;
+  color: white;
 }
 
 .category {
   font-size: 1rem;
   text-decoration: none;
   padding: 0.25rem 1rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   border: none;
   outline: none;
   cursor: pointer;
@@ -84,4 +84,55 @@ nav ul li a:focus     {
   background-color: #816362;
   color: white;
   font-size: 1.3rem;
+}
+
+.my-2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+button {
+  text-decoration: none;
+  padding: 0.25rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0 1px;
+  background-color: #816362;
+  color: white;
+  font-size: 1.3rem;
+}
+button:hover {
+  background-color: #282c34;
+}
+button:focus {
+  border-radius: 15px;
+  text-shadow: none;
+  background-color: #816362;
+  color: white;
+}
+.form-email {
+  padding: 10px 0px;
+}
+
+.form-name {
+  padding: 10px 0px;
+}
+
+.form-lastname {
+  padding: 10px 0px;
+}
+
+.form-password {
+  padding: 10px 0px;
+}
+
+.button {
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #4caf50; /* Green */
+  color: white;
 }

@@ -10,8 +10,10 @@ const typeDefs = gql`
     _id: ID
     firstName: String
     lastName: String
+    image: String
     email: String
     location: String
+    bio: String
   }
 
   type Costume {
