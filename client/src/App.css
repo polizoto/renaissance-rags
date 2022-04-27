@@ -1,3 +1,6 @@
+@font-face { font-family: Bauhaus; src: url('./fonts/BauhausStd-Light.otf'); } 
+@font-face { font-family: Bauhaus; font-weight: bold; src: url('./fonts/BauhausStd-Bold.otf'); }
+
 body .App {
   text-align: center;
 }
@@ -152,4 +155,28 @@ button:focus {
 .container {
   display: flex;
   flex-direction: row;
+}
+
+.costume-link {
+  text-align: center;
+  font-family: Bauhaus, sans-serif;
+  font-weight: bold;
+  color: #816362;
+  font-size: 2.3rem;
+}
+
+.costume-vendor {
+  font-weight: bold;
+  color: #816362;
+  padding: 10px;
+}
+
+.costume-info {
+  font-weight: bold;
+  padding: 10px;
+}
+
+.add-to-Cart {
+  text-align: center;
+  padding: 10px;
 }

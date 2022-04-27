@@ -12,6 +12,7 @@ import VendorItem from '../components/VendorItem';
 import spinner from '../assets/spinner.gif';
 import Cart from '../components/Cart';
 import './Vendor.css';
+import { Grid } from "@material-ui/core"
 
 function Vendor() {
   const dispatch = useDispatch();
@@ -98,7 +99,9 @@ function Vendor() {
             </div>
           ))}
       {state.costumes.length ? (
-        <div className="flex-row">
+          <Grid container spacing={4}   direction="row"
+          justifyContent="space-evenly"
+          alignItems="stretch">
           {filterCostumes().map((costume) => (
             <VendorItem
               key={costume._id}
@@ -113,7 +116,7 @@ function Vendor() {
             />
           ))}
           <Cart />
-        </div>
+          </Grid>
       ) : (
         <h3>This vendor doesn't have any costumes yet!</h3>
       )}

@@ -49,27 +49,28 @@ function CostumeItem(item) {
 }
 
   return (
-  <Grid container alignItems="stretch">
-  <Grid item style={{display: 'flex'}}>
-<Card style={{display: 'flex', justifyContent: 'space-between', flexDirection: 'column'}} variant="outlined">
-<Link to={`/costumes/${_id}`}>
+    <Grid item style={{display: 'flex', justifyContent: 'space-between'}}>
+    <Card variant="outlined">
+    <Link style={{ textDecoration: 'none' }} to={`/costumes/${_id}`}>
        <img
          alt={name}
          src={`/images/${image}`}
        />
-       <p>{name}</p>
+       <p className="costume-link">{name}</p>
      </Link>
-     <Link to={`/vendors/${vendor_id}`}>
-       <p>sold by {vendor_firstName} {vendor_lastName}</p>
+     <Link style={{ textDecoration: 'none'}} to={`/vendors/${vendor_id}`}>
+       <p className="costume-vendor">{vendor_firstName} {vendor_lastName}</p>
      </Link>
-     <div>
+     <div className="costume-info">
        <div>{quantity} {pluralize("item", quantity)} in stock</div>
        <span>${price}</span>
      </div>
+     <div className="add-to-Cart">
      <button onClick={addToCart}>Add to cart</button>
+     </div>
   </Card>
   </Grid>
-</Grid>
+
 
 );
 }
