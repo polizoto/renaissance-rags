@@ -62,7 +62,7 @@ function Nav() {
           <span role="img" aria-label="crown emoticon">
             👑
           </span>
-          Renaissance-Rags
+          Renaissance Rags
         </Link>
       </h1>
 

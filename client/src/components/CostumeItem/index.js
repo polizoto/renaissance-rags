@@ -46,8 +46,8 @@ function CostumeItem(item) {
   }
 }
 
-  return (
-    <div className="card px-1 py-1">
+  return ( 
+    <div className="card px-1 py-1 g-4">
       <Link to={`/costumes/${_id}`}>
         <img
           alt={name}
