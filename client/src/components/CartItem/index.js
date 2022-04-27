@@ -6,7 +6,7 @@ import { idbPromise } from "../../utils/helpers";
 const CartItem = ({ item }) => {
   const dispatch = useDispatch();
 
-  const removeFromCart = (item) => {
+  const removeFromCart = item => {
     dispatch({
       type: REMOVE_FROM_CART,
       _id: item._id,

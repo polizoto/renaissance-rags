@@ -35,13 +35,7 @@ const costumeSchema = new Schema({
       ref: 'Vendor',
       required: true,
     }
-},
-{
-  toJSON: {
-    virtuals: true
-  }
-}
-);
+  });
 
 const Costume = mongoose.model('Costume', costumeSchema);
 
