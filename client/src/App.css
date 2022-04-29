@@ -73,7 +73,11 @@ nav ul li a:focus {
   text-shadow: none;
   background-color: white;
   color: #816362;
-  border: 1px solid #816362;
+  /* border: 1px solid #816362; */
+}
+
+ul.flex-row {
+  margin: 0px;
 }
 
 .category {
@@ -130,18 +134,18 @@ button:focus {
   /* border: 1px solid #999999; */
 }
 
-h1:hover {
+.title-header:hover {
   border-radius: 15px;
   background-color: white;
   color: #816362;
-  /* border: 1px solid #999999; */
+  border: 1px solid #999999;
 }
 
-h1:focus {
+.title-header:focus {
   border-radius: 15px;
   background-color: white;
   color: #816362;
-  /* border: 1px solid #999999; */
+  border: 1px solid #999999;
 }
 
 .form-email {
@@ -184,6 +188,8 @@ h1:focus {
   color: #816362;
   font-size: 2.3rem;
 }
+
+
 
 .costume-vendor {
   font-weight: bold;
@@ -250,6 +256,13 @@ background-color: #816362;
 color: white;
 }
 
+.costume-link:focus {
+  border: 1px solid #816362;
+  background-color: #816362;
+  color: white;
+  outline: none;
+}
+
 
   a:focus {
     /* border: 1px solid #816362;
@@ -270,11 +283,55 @@ a:focus > img {
     opacity: 1;
   }
 
-  .costume-vendor:hover {
-    background-color: #816362;
-    color: white;
-    }
+.costume-vendor:hover {
+background-color: #816362;
+color: white;
+}
 
-      .add-to-Cart > button:focus {
-        border: 1px solid #816362;
-      }
+.add-to-Cart > button:focus {
+  border: 1px solid #816362;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.flex-row {
+
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.backtoCostumes:hover {
+  outline: none;
+  border: 1px solid #816362;
+  background-color: white;
+}
+
+.backtoCostumes:focus {
+  outline: none;
+  border: 1px solid #816362;
+  background-color: white;
+}
+
+.vendor-link {
+  color: #816362;
+  text-decoration: none;
+}
+
+.vendor-link:hover {
+  outline: none;
+  border: 1px solid #816362;
+  background-color: white;
+}
+
+.vendor-link:focus {
+  outline: none;
+  border: 1px solid #816362;
+  background-color: white;
+}
+
+.costume-detail-info {
+  text-align: center;
+  align-items: center;
+}

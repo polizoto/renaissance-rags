@@ -4,7 +4,7 @@ import { pluralize } from "../../utils/helpers"
 import { idbPromise } from "../../utils/helpers";
 import { useSelector, useDispatch } from 'react-redux';
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from '../../utils/actions';
-import { Grid, Card } from "@material-ui/core"
+import { Grid, Card, CardMedia, CardContent } from "@material-ui/core"
 
 function VendorItem(item) {
   const dispatch = useDispatch();
@@ -50,11 +50,20 @@ function VendorItem(item) {
     <Grid item style={{display: 'flex', justifyContent: 'space-between'}}>
     <Card variant="outlined">
     <Link style={{ textDecoration: 'none' }} to={`/costumes/${_id}`}>
-       <img
+    <CardMedia
+                    
+                    component="img"
+                    image={`/images/${image}`}
+                    alt={name}
+                    title={name}
+                />
+       {/* <img
          alt={name}
          src={`/images/${image}`}
-       />
-       <p className="costume-link">{name}</p>
+       /> */}
+    <CardContent>
+    <p tabIndex="0" className="costume-link">{name}</p>
+    </CardContent>
      </Link>
      <Link style={{ textDecoration: 'none'}} to={`/vendors/${vendor_id}`}>
        <p className="costume-vendor">{vendor_firstName} {vendor_lastName}</p>

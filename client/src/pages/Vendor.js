@@ -16,7 +16,8 @@ import { Grid } from "@material-ui/core"
 
 function Vendor() {
   const color = {
-    "white": "#816362"
+    "white": "#816362",
+    "hover": "white"
   }
   const dispatch = useDispatch();
   const state = useSelector((state) => {
@@ -86,7 +87,7 @@ function Vendor() {
 
   return (
     <div className="my-2">
-      <Link style={{ color: color.white, textDecoration: "none" }} to="/home"><p className="backlink">← Back to Costumes</p></Link>
+      <Link className="backtoCostumes" style={{ color: color.white, textDecoration: "none", hover: color.hover }} to="/home">← Back to Costumes</Link>
       {filterVendor().map((costume) => (
             <div key={costume._id} className="card px-1 py-1">
                 <h2 className="vendor">{costume.firstName} {costume.lastName}</h2>
@@ -96,13 +97,14 @@ function Vendor() {
                 src={`/images/${costume.image}`}/>
                 <p className="vendor-info">{costume.bio}</p>
                 <p className="vendor-info"><strong>Location: </strong> {costume.location}</p>
-                <p className="vendor-info"><strong>Contact: </strong><a href={`mailto:${costume.email}`}>{costume.email}</a></p>
+                <p className="vendor-info"><strong>Contact: </strong><a className="vendor-link" href={`mailto:${costume.email}`}>{costume.email}</a></p>
                 </div>
                 <h2 className="vendor-title">Costumes</h2>
-            </div>
+                </div>
+
           ))}
       {state.costumes.length ? (
-          <Grid container spacing={4}   direction="row"
+          <><Grid container spacing={4} direction="row"
           justifyContent="space-evenly"
           alignItems="stretch">
           {filterCostumes().map((costume) => (
@@ -115,16 +117,15 @@ function Vendor() {
               quantity={costume.quantity}
               vendor_firstName={costume.vendor.firstName}
               vendor_lastName={costume.vendor.lastName}
-              vendor_id={costume.vendor._id}
-            />
+              vendor_id={costume.vendor._id} />
           ))}
-          <Cart />
-          </Grid>
+        </Grid><Cart /></>
       ) : (
         <h3>This vendor doesn't have any costumes yet!</h3>
       )}
       {loading ? <img src={spinner} alt="loading" /> : null}
     </div>
+
   );
 }
 

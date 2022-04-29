@@ -65,7 +65,7 @@ function CostumeItem(item) {
          src={`/images/${image}`}
        /> */}
       <CardContent>
-       <p className="costume-link">{name}</p>
+       <p tabIndex="0" className="costume-link">{name}</p>
        </CardContent>
      </Link>
      <Link style={{ textDecoration: 'none'}} to={`/vendors/${vendor_id}`}>
