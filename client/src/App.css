@@ -166,7 +166,7 @@ button:focus {
 
 .categoryList {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -336,5 +336,9 @@ color: white;
    
   .flex-row {
     padding: 0px
+  }
+
+  .categoryList {
+    justify-content: space-around;
   }
 }
