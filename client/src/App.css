@@ -189,6 +189,8 @@ button:focus {
   font-size: 2.3rem;
 }
 
+
+
 .costume-vendor {
   font-weight: bold;
   color: #816362;
@@ -254,6 +256,13 @@ background-color: #816362;
 color: white;
 }
 
+.costume-link:focus {
+  border: 1px solid #816362;
+  background-color: #816362;
+  color: white;
+  outline: none;
+}
+
 
   a:focus {
     /* border: 1px solid #816362;
@@ -291,4 +300,33 @@ color: white;
 
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+.backtoCostumes:hover {
+  outline: none;
+  border: 1px solid #816362;
+  background-color: white;
+}
+
+.backtoCostumes:focus {
+  outline: none;
+  border: 1px solid #816362;
+  background-color: white;
+}
+
+.vendor-link {
+  color: #816362;
+  text-decoration: none;
+}
+
+.vendor-link:hover {
+  outline: none;
+  border: 1px solid #816362;
+  background-color: white;
+}
+
+.vendor-link:focus {
+  outline: none;
+  border: 1px solid #816362;
+  background-color: white;
 }
