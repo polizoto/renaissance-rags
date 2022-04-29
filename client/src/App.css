@@ -247,10 +247,6 @@ title:hover {
   outline: none;
 }
 
-.greeting {
-  text-align: center;
-}
-
 .costume-link:hover {
 background-color: #816362;
 color: white;
@@ -334,4 +330,11 @@ color: white;
 .costume-detail-info {
   text-align: center;
   align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+   
+  .flex-row {
+    padding: 0px
+  }
 }

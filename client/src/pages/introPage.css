@@ -1,0 +1,32 @@
+@font-face { font-family: Bauhaus; src: url('../fonts/BauhausStd-Light.otf'); } 
+@font-face { font-family: Bauhaus; font-weight: bold; src: url('../fonts/BauhausStd-Bold.otf'); }
+
+#c {
+    display: flex;
+    justify-content: space-between;
+}
+
+#d {
+    align-items: center;
+}
+
+#e {
+   max-height: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+   
+    #mycontainer { display: table; }
+    #a { display: table-footer-group; }
+    #b { display: table-footer-group; }
+    #c { display: table-footer-group; }
+    #d { display: table-header-group; }
+    #e { display: table-footer-group; }
+    #e { display: table-header-group; }
+  }
+
+  .greeting {
+    text-align: center;
+    font-family: Bauhaus, sans-serif;
+  font-weight: bold;
+  }

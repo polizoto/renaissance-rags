@@ -46,10 +46,10 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div>
+        <div id="mycontainer">
         <Provider store={store}>
-          <Nav />
-          <Background />
+          <Nav id="b" />
+          <Background id="c" />
           <Switch>
             <Route exact path="/" component={IntroPage} />
             <Route exact path="/Home" component={Home} />
