@@ -13,6 +13,7 @@ import {
 import { QUERY_COSTUMES } from '../utils/queries';
 import Cart from '../components/Cart';
 import spinner from '../assets/spinner.gif';
+import { Grid, Card, CardMedia, CardContent } from "@material-ui/core"
 
 function Detail() {
   const color = {
@@ -103,12 +104,28 @@ function filterCostume() {
     <>
       {currentCostume ? (
         <div>
-          <Link style={{ color: color.white, textDecoration: "none" }} to="/">← Back to Costumes</Link>
+          <Link className="backtoCostumes" style={{ color: color.white, textDecoration: "none" }} to="/">← Back to Costumes</Link>
 
           <h2 className="costume-title">{currentCostume.name}</h2>
 
           <p>{currentCostume.description}</p>
-
+          <Grid item style={{display: 'flex', justifyContent: 'space-between'}}>
+          <Card variant="outlined">
+          <CardMedia
+                    
+                    component="img"
+                    image={`/images/${currentCostume.image}`}
+                    alt={currentCostume.name}
+                    title={currentCostume.name}
+                />
+          {filterCostume().map((costume) => (
+            <div key={costume._id} className="card px-1 py-1">
+                  <Link style={{ textDecoration: 'none'}} to={`/vendors/${costume.vendor._id}`}>
+                  <p className="costume-vendor">{costume.vendor.firstName} {costume.vendor.lastName}</p>
+                </Link>
+                </div>
+          ))}
+          <CardContent>
           <p>
             <strong>Price:</strong>${currentCostume.price}{' '}
             <button onClick={addToCart}>Add to cart</button>
@@ -118,20 +135,10 @@ function filterCostume() {
             >
             Remove from Cart
             </button>
-
           </p>
-
-          <img
-            src={`/images/${currentCostume.image}`}
-            alt={currentCostume.name}
-          />
-          {filterCostume().map((costume) => (
-            <div key={costume._id} className="card px-1 py-1">
-                  <Link style={{ textDecoration: 'none'}} to={`/vendors/${costume.vendor._id}`}>
-                  <p className="costume-vendor">{costume.vendor.firstName} {costume.vendor.lastName}</p>
-                </Link>
-                </div>
-          ))}
+          </CardContent>
+            </Card>
+            </Grid>
         </div>
       ) : null}
       {loading ? <img src={spinner} alt="loading" /> : null}
