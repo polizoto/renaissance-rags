@@ -73,7 +73,7 @@ function Nav() {
     "white": "#816362"
   }
   return (
-    <header className="flex-row px-1 title">
+    <header className="title">
       <h1>
         <Link className="title-header" style={{ color: color.white, textDecoration: "none" }} to="/">
           <span role="img" aria-label="crown emoticon">

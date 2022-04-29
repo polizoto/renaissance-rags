@@ -76,6 +76,10 @@ nav ul li a:focus {
   /* border: 1px solid #816362; */
 }
 
+ul.flex-row {
+  margin: 0px;
+}
+
 .category {
   font-size: 1rem;
   text-decoration: none;
@@ -270,11 +274,21 @@ a:focus > img {
     opacity: 1;
   }
 
-  .costume-vendor:hover {
-    background-color: #816362;
-    color: white;
-    }
+.costume-vendor:hover {
+background-color: #816362;
+color: white;
+}
 
-      .add-to-Cart > button:focus {
-        border: 1px solid #816362;
-      }
+.add-to-Cart > button:focus {
+  border: 1px solid #816362;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.flex-row {
+
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
