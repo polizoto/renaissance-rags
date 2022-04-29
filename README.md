@@ -40,26 +40,26 @@
 
 ## User Story
 
-- AS a renaissance enthusiasts
+- AS a renaissance enthusiast
 - I am looking to support local vendors
 - SO I can browse a variety of costumes and purchase.
 
 ## Link to live site
 
-- https://whispering-fjord-16472.herokuapp.com/
+- [Renaissance Rags site](https://whispering-fjord-16472.herokuapp.com/)
 
 ## Screenshot
 
-![screenshot](https://github.com/polizoto/renaissance-rags/blob/main/client/public/images/signup-screenshot.png)
-![screenshot](https://github.com/polizoto/renaissance-rags/blob/main/client/public/images/login-screenshot.png)
-![screenshot](https://github.com/polizoto/renaissance-rags/blob/main/client/public/images/costumes-screenshot.png)
-![screenshot](https://github.com/polizoto/renaissance-rags/blob/main/client/public/images/contact-screenshot.png)
+![screenshot of signup](https://github.com/polizoto/renaissance-rags/blob/main/client/public/images/signup-screenshot.png)
+![screenshot of login](https://github.com/polizoto/renaissance-rags/blob/main/client/public/images/login-screenshot.png)
+![screenshot of costumes](https://github.com/polizoto/renaissance-rags/blob/main/client/public/images/costumes-screenshot.png)
+![screenshot of contact page](https://github.com/polizoto/renaissance-rags/blob/main/client/public/images/contact-screenshot.png)
 
 ## Milestones
 
 - The code was operational early
 - Frequent conversation in Slack and Zoom meetings
-- Working as a team in a real-world project, especially with React
+- Working as a team on a real-world project, especially with React
 
 ## Challenges
 
@@ -76,4 +76,5 @@
 
 ## Slide Deck
 
-- https://docs.google.com/presentation/d/1JFqZ0Ftkp46CeSEuTID4TDu9UI7QLk0IsuNMdt68MNk/edit#slide=id.p
+- [Slide Deck](https://docs.google.com/presentation/d/1JFqZ0Ftkp46CeSEuTID4TDu9UI7QLk0IsuNMdt68MNk/edit#slide=id.p)
+
