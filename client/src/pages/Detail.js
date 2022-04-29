@@ -126,7 +126,7 @@ function filterCostume() {
                 </div>
           ))}
           <CardContent>
-          <p>
+          <p className="costume-detail-info">
             <strong>Price:</strong>${currentCostume.price}{' '}
             <button onClick={addToCart}>Add to cart</button>
             <button className="removeCart"
