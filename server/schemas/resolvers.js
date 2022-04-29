@@ -59,6 +59,8 @@ const resolvers = {
       const url = new URL(context.headers.referer).origin;
       const order = new Order({ costumes: args.costumes });
       const line_items = [];
+      console.log(url)
+
 
       const { costumes } = await order.populate('costumes').execPopulate();
 
@@ -74,7 +76,6 @@ const resolvers = {
 
         const price = await stripe.prices.create({
           costume: costume.id,
-
           unit_amount: costumes[i].price * 100,
           currency: 'usd',
         });
@@ -92,7 +93,7 @@ const resolvers = {
         success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${url}/`
       });
-      console.log(session)
+
       return { session: session.id };
     }
   },
