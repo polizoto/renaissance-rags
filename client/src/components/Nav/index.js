@@ -75,11 +75,11 @@ function Nav() {
   return (
     <header className="flex-row px-1 title">
       <h1>
-        <Link style={{ color: color.white, textDecoration: "none" }} to="/">
+        <Link className="title-header" style={{ color: color.white, textDecoration: "none" }} to="/">
           <span role="img" aria-label="crown emoticon">
             👑 
           </span>
-          <span className="title">
+          <span>
           Renaissance Rags
           </span>
         </Link>

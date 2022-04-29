@@ -73,7 +73,7 @@ nav ul li a:focus {
   text-shadow: none;
   background-color: white;
   color: #816362;
-  border: 1px solid #816362;
+  /* border: 1px solid #816362; */
 }
 
 .category {
@@ -130,18 +130,18 @@ button:focus {
   /* border: 1px solid #999999; */
 }
 
-h1:hover {
+.title-header:hover {
   border-radius: 15px;
   background-color: white;
   color: #816362;
-  /* border: 1px solid #999999; */
+  border: 1px solid #999999;
 }
 
-h1:focus {
+.title-header:focus {
   border-radius: 15px;
   background-color: white;
   color: #816362;
-  /* border: 1px solid #999999; */
+  border: 1px solid #999999;
 }
 
 .form-email {
