@@ -64,6 +64,8 @@ const resolvers = {
 
       const { costumes } = await order.populate('costumes').execPopulate();
 
+      console.log(costumes)
+
       for (let i = 0; i < costumes.length; i++) {
     
         // problem occurs here
@@ -72,6 +74,8 @@ const resolvers = {
             description: costumes[i].description,
             images: [`${url}/images/${costumes[i].image}`]
           });
+
+          console.log(costume)
           
 
         const price = await stripe.prices.create({
@@ -93,6 +97,8 @@ const resolvers = {
         success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${url}/`
       });
+
+      console.log(session)
 
       return { session: session.id };
     }

@@ -23,12 +23,12 @@ const Cart = () => {
     console.log(data)
 
     useEffect(() => {
-      if (data) {
-        stripePromise.then((res) => {
-          res.redirectToCheckout({ sessionId: data.checkout.session });
-        });
-      }
-    }, [data]);
+        if (data) {
+          stripePromise.then((res) => {
+            res.redirectToCheckout({ sessionId: data.checkout.session });
+          });
+        }
+      }, [data]);
     
       useEffect(() => {
 
