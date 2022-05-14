@@ -85,23 +85,23 @@ export default function Contact () {
         e.target.reset();
       }}
     >
-      {loading && <div>Submitting form...</div>}
-      {showSuccessMessage && <div>Submit successful</div>}
-      {errorMessage && <div className='error'>{errorMessage}</div>}
       <div className="form-name">
       <Input selector='name' text='Name ' required onChange={handleChange}/>
       </div>
       <div className="form-email">
       <Input selector='email' text='Email Address ' required onChange={handleChange}/>
       </div>
+      {errorMessage && <div className='error'>{errorMessage}</div>}
       <div className="form-message">
       <TextArea selector='message' text='Message' onChange={handleChange}/>
       </div>
       <div className="form-checkbox"> 
       <Checkbox className='checkbox' selector='vendor' text='Are you interested in becoming a vendor?' onChange={handleChange}/>
       </div>
+      {loading && <div>Submitting form...</div>}
+      {showSuccessMessage && <div>Submit successful</div>}
       <div className="form-button">
-      <input disabled={errorMessage} className="form-button" type='submit' value='Submit' />
+      <button disabled={errorMessage} type="submit">Submit</button>
       </div>
     </form>
     </div>
